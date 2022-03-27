@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+import { Contract, ethers } from "ethers";
 import React from "react";
 
 import USER_ABI from "../abis/User.json";
@@ -22,6 +22,7 @@ export interface IStoreAction {
 }
 interface IStoreState {
   loggedIn: boolean;
+  contract?: Contract;
   wallet?: string;
   provider?: ethers.providers.Web3Provider;
   userType?: UserType;
@@ -84,7 +85,7 @@ async function loginUser(
 
   dispatch({
     type: StoreAction.LOGIN,
-    payload: { wallet, provider, userType, logout },
+    payload: { contract, wallet, provider, userType, logout },
   });
 }
 

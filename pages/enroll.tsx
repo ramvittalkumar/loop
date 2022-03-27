@@ -1,16 +1,25 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { Form, FormControl, InputGroup } from "react-bootstrap";
+//import { login } from "../authentication/login";
 import Button from "../components/button";
+//import { createProfile } from "../services/create_profile";
+import { useStore } from "../services/store";
+import { login } from "../services/login-user";
 
 const Enroll: React.FC = () => {
   const router = useRouter();
   const [name, setName] = useState("");
+  const {
+    state: { contract , wallet },
+  } = useStore();
 
   const handleArtistOnboard = async (name) => {
 
     //TODO contract init and invocation of create Artist()
-    console.log("Artist Onboard process started, name: ",name);
+    console.log("Artist Onboard process started, name: "+name+" wallet: "+wallet+" address: "+contract);
+    //createProfile(wallet);
+    login();
     router.push("/artist");
   };
   return (

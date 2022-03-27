@@ -17,7 +17,7 @@ export default function Home() {
       <main className="body">
         <a>
           <span className="flex items-center justify-center">
-            <img src="/Loop.jpeg" alt="Loop Logo" width={500} height={275} />
+            <img src="/loop2.png" alt="Loop Logo" width={500} height={275} />
           </span>
         </a>
         <p className="text-3xl font-bold">

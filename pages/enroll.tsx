@@ -19,7 +19,7 @@ const Enroll: React.FC = () => {
     //TODO contract init and invocation of create Artist()
     console.log("Artist Onboard process started, name: "+name+" wallet: "+wallet+" address: "+contract);
     //createProfile(wallet);
-    login();
+    //login();
     router.push("/artist");
   };
   return (

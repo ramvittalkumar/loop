@@ -31,6 +31,8 @@ Technologies
 - Testnet - Mumbai Polygon , Opensea
 - Tools - Truffle, Remix, Metamask
 
+# Demo URL
+https://ephemeral-kelpie-fe2720.netlify.app/
 
 # How to setup and run Loop
 * yarn install
